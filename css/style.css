@@ -137,10 +137,7 @@ margin-right: 76px}
 
 .adress{
     font-style: normal;
-    margin-left: auto;
-    
-    
-    }
+    margin-left: auto;    }
 
 .adress-list-display-flex{
     display: flex;
@@ -163,8 +160,17 @@ margin-right: 76px}
 /* Section 1 Hero */
 
 .hero{
-    background-color:var(--navy-blue-color);
-    padding: 188px 0;}
+    background-color:var(--hero-background-color);
+    padding: 188px 0;
+    background-image:
+        /* linear-gradient(rgba(46, 47, 66, 0.7)) */
+        url(../images/people-office.jpg)
+        ;
+    max-width: 1440рх;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    ;}
 
 .hero-titel{font-size: 56px;
 line-height: 1.07;
@@ -189,7 +195,12 @@ max-width: 496px;}
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: var(--white-background-color);
-    cursor: pointer;}
+    cursor: pointer;
+    
+    transition-property: background-color ;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: ;}
 
 
 .hero-button:hover {background-color: var(--pressed-state-color);}
@@ -269,17 +280,42 @@ max-width: 496px;}
 
 .section-four-list-display{
     display: flex;
-    gap: 24px;}
+        gap: 24px;}
 
 .section-four-div{
     padding: 32px 16px;}
 
-.section-four-social-icons{
-    display: flex;
-    padding-top: 21.5px;}
+.section-four-social-list{
+        border-radius: 4px;
+        padding: 12px 24px;
+        display: flex;
+        padding-top: 21.5px;
+        gap: 48px;}
 
-.section-four-svg{
+.section-four-svg{ 
+    background-color: var(--primary-barand-color);
+    color: var(--light-color);
+    transition: fill 250 cubic-bezier(0.4, 0, 0.2, 1);;
+    display: inline-block;
     
+   
+    
+            
+}
+
+.section-four-svg:hover{
+    
+    background-color: var(--success-color);}
+
+.section-four-svg:focus {
+    background-color: var(--success-color);}
+
+
+.section-four-soc-link{
+   
+    
+  
+
 }
 
 .section-four-titel-h-two{
