@@ -452,19 +452,46 @@ margin-bottom: 16px;}
         line-height: 1.5;        
         text-align: center;
         letter-spacing: 0.04em;
-        cursor: pointer;}
-    
+        cursor: pointer;        
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);;}
+        
     .porfolio-button:hover
     {background-color: var(--pressed-state-color);
-    border: 1px solid transparent;}
+    border: 1px solid transparent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+                0px 2px 1px rgba(0, 0, 0, 0.08), 
+                0px 2px 2px rgba(0, 0, 0, 0.12);;}
 
     .porfolio-button:focus{
         background-color: var(--pressed-state-color);
-        border: 1px solid transparent;}
+        border: 1px solid transparent;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+                    0px 2px 1px rgba(0, 0, 0, 0.08), 
+                    0px 2px 2px rgba(0, 0, 0, 0.12);;
+        }
 
     .porfolio-button:hover{color: var(--white-background-color);}
     .porfolio-button:focus{color: var(--white-background-color);}
     
+    .portfolio-link{
+        display: block;
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+    .portfolio-link:hover{
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+                    0px 1px 1px rgba(46, 47, 66, 0.16), 
+                    0px 2px 1px rgba(46, 47, 66, 0.08);}
+
+    .portfolio-link:focus{
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+                    0px 1px 1px rgba(46, 47, 66, 0.16), 
+                    0px 2px 1px rgba(46, 47, 66, 0.08);}
+     
+
     .portfolio-list-wrap{
         display: flex;
         flex-wrap: wrap;
@@ -487,11 +514,35 @@ margin-bottom: 16px;}
         letter-spacing: 0.02em;
         color: var(--navy-blue-color);}
 
+    .portfolio-img{
+         position: relative;
+         overflow: hidden;
+
+    }
+    .portfolio-text-under-img{
+        position: absolute;
+        top: 0; 
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--light-color);
+        letter-spacing: 0.02em; 
+        padding: 40px 32px;
+        background-color: #4d5ae5;
+        height: 100%;
+        width: 100%;
+        transform: translateY(100%); 
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+        
+    }
+    
+
     .portfolio-text{
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        color: var(--body-text-color);}
+        color: var(--body-text-color);
+        }
+   
 
     .is-hidden {
             opacity: 0;
